@@ -1,6 +1,7 @@
 import React from 'react'
 import OffCanvas from './OffCanvas.js'
 import DelayedCharacters from './DelayedCharacters.js'
+import AnnoucementBanner from './AnnoucementBanner.js'
 function Header(){
     return(
         <header>
@@ -16,6 +17,9 @@ function Header(){
                             <h2>
                                 <DelayedCharacters className='zip' word='Software Engineer'/>
                             </h2>
+                        </div>
+                        <div className='mb-3'>
+                            <AnnoucementBanner title='Welcome to the React Side!'/>
                         </div>
                     </div>
                 </div>

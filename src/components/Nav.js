@@ -1,10 +1,11 @@
 import NavList from './NavList.js'
-function Nav(props){
+import {Link} from 'react-router-dom'
+function Nav(){
     return (
             <div className='container-fluid sticky-top m-0 p-0'>
                 <nav className='navbar navbar-expand-lg primary-color bg-gradient shadow-sm' data-bs-theme='dark'>
                     <div className='container-fluid m-0'>
-                        <a className='navbar-brand mx-3' href="">JessePiccione.info</a>
+                        <Link className='navbar-brand mx-3' to='/'>JessePiccione.info</Link>
                         <button 
                         className="navbar-toggler"
                         type="button"
@@ -16,7 +17,7 @@ function Nav(props){
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className='collapse navbar-collapse' id ='navbarSupportedContent'>
-                            <NavList setView={props.setView} />
+                            <NavList/>
                         </div>
                     </div>
                 </nav>

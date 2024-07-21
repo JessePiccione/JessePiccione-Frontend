@@ -1,17 +1,15 @@
+import {Link} from 'react-router-dom'
 function NavItem(props){
-    return (<li key={props.i}
+    return (
+    <li key={props.i}
         className='nav-item'>
-        <a
-        className='nav-link'  
-        data-bs-toggle="collapse" 
-        data-bs-target="#navbarSupportedContent"
-        href='/'
-        onClick={
-            function(e){
-                props.setView(props.val)
-            }
-        } 
-        >{props.name}</a>
+        <Link
+        to={`/${(props.name==='Home')?"":props.name.toLowerCase()}`}
+        className='nav-link'>
+            <span>
+                {props.name}
+            </span>
+        </Link>
     </li>);
 }
 export default NavItem;

@@ -35,7 +35,6 @@ function Home(props){
                     setError(error)
                 }
                 finally{
-                    
                     if(!requestHome){
                         const fetchHome = async () =>{
                             try {
@@ -59,8 +58,6 @@ function Home(props){
             }
             fetchTech();
         }
-        
-       
     })
     if((data && technology.length>0) || (loadingHome)){
         return (
