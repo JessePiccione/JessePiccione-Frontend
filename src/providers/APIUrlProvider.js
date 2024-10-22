@@ -4,10 +4,9 @@ const APIUrlContext = React.createContext();
 const URL = 'https://REDACTED_URL_PLACEHOLDER/'
 const TOKEN = 'REDACTED_TOKEN_PLACEHOLDER'
 const APIUrlProvider = ({children}) =>{
-    const [token, setToken] = React.useState(TOKEN);
-    const [url, setUrl] = React.useState(URL);
+    const [context, setContext] = React.useState({token:TOKEN, url:URL})
     return (   
-        <APIUrlContext.Provider value={{url,token}}>
+        <APIUrlContext.Provider value={context}>
             {children}
         </APIUrlContext.Provider>
     )
