@@ -1,14 +1,14 @@
 //React
 import React, {useState, useEffect} from 'react' 
 //Providers
-import {Url} from '../../../../../providers/APIUrlProvider.js'
-import Card from '../../../../../providers/Card.js'
+import {Url} from '../../../../../providers/api/APIUrlProvider'
 //components
-import PlaceHolder from '../../placeholder/PlaceHolder.js'
-import HeaderTwo from '../../../partials/headerTwo.js'
-import ListGroupItem from '../../../partials/listGroupItem.js'
+import PlaceHolder from '../placeholder/PlaceHolder'
+import HeaderTwo from '../../../partials/headerTwo'
+import ListGroupItem from '../../../partials/listGroupItem'
+import Card from '../../../partials/Card'
 //api
-import {loadProjects} from './projectsAPI.js'
+import {loadProjects} from './api'
 function Projects(){
     const {url} = Url();
     const [loading, setLoading] = useState(true)

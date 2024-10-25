@@ -2,7 +2,7 @@ import React from 'react'
 import OffCanvas from './OffCanvas.js'
 import DelayedCharacters from './DelayedCharacters.js'
 import HeaderTwo from '../partials/headerTwo.js'
-import {Url} from '../../../providers/APIUrlProvider.js'
+import {Url} from '../../../providers/api/APIUrlProvider.js'
 function Header(){
     const {url} = Url()
     return(

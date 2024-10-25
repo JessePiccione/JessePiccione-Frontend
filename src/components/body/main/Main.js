@@ -9,7 +9,7 @@ import Skills from './views/skills/Skills.js'
 import Awards from './views/awards/Awards.js'
 import HeaderTwo from '../partials/headerTwo.js'
 import OffCanvasButton from './OffCanvasButton.js'
-import Card from '../../../providers/Card.js'
+import Card from '../partials/Card.js'
 const Main = () => {
     const MemoHome = memo(Home, [])
     const MemoExperience = memo(Experience, [])

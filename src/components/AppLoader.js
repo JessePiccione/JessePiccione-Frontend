@@ -1,14 +1,14 @@
 //react
 import React, {useEffect, useState} from 'react'
 //providers
-import APIUrlProvider from '../providers/APIUrlProvider.js'
-import Card from '../providers/Card.js'
+import APIUrlProvider from '../providers/api/APIUrlProvider.js'
 //components
 import VantaBackground from './vanta/VantaBackground.js'
 import Assistant from './body/assistant/Assistant.js'
 import Header from './body/header/Header.js'
 import Main from './body/main/Main.js'
 import Footer from './body/footer/Footer.js'
+import Card from './body/partials/Card.js'
 import HeaderTwo from './body/partials/headerTwo.js'
 function AppLoader() {
   const [loadingState, setLoadingState] = useState({loading:true,error:null});

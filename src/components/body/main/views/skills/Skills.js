@@ -1,13 +1,13 @@
 //React
 import React, {useState, useEffect} from 'react'
 //Providers 
-import {Url} from '../../../../../providers/APIUrlProvider.js'
+import {Url} from '../../../../../providers/api/APIUrlProvider.js'
 //Components
-import PlaceHolder from '../../placeholder/PlaceHolder.js'
+import PlaceHolder from '../placeholder/PlaceHolder.js'
 import HeaderTwo from '../../../partials/headerTwo.js'
 import ListGroupItem from '../../../partials/listGroupItem.js'
 //api 
-import {fetchCategories, fetchSkills} from './skillsAPI.js'
+import {fetchCategories, fetchSkills} from './api'
 function Skills(){
     //provider state 
     const {url} = Url()

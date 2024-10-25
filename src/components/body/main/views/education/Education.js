@@ -1,15 +1,16 @@
 //React
 import React, {useState, useEffect} from 'react'
 //Providers
-import Card from '../../../../../providers/Card.js'
-import {Url} from '../../../../../providers/APIUrlProvider.js'
+import {Url} from '../../../../../providers/api/APIUrlProvider.js'
 //Components
-import PlaceHolder from '../../placeholder/PlaceHolder.js'
+import PlaceHolder from '../placeholder/PlaceHolder.js'
+import Error from '../error/Error'
 //partials
+import Card from '../../../partials/Card.js'
 import HeaderTwo from '../../../partials/headerTwo.js'
 import ListGroupItem from '../../../partials/listGroupItem.js'
 //api
-import {loadEducation} from './educationAPI.js'
+import {loadEducation} from './api'
 function Education(){   
     const {url} = Url()
     const [data, setData] = useState(null)
@@ -52,12 +53,6 @@ function Education(){
                 })
             }
         </div>
-    ):(
-        <div className='row'>
-            <div className='col-12 pt-3'>
-                <Card>{error.message}</Card>
-            </div>
-        </div>
-    )
+    ):(<Error message={error.message}/>)
 }
 export default Education;

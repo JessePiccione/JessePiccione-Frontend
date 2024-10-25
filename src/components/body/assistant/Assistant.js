@@ -1,7 +1,7 @@
 //react
 import React, {useState, useEffect} from 'react'
 //providers
-import {Url} from '../../../providers/APIUrlProvider.js'
+import {Url} from '../../../providers/api/APIUrlProvider.js'
 //components
 import AssistantMessageBox from './assistantMessageBox.js'
 const Assistant = () =>{

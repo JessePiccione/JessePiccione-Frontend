@@ -1,18 +1,17 @@
 //react
 import { useState, useEffect } from 'react'
 //providers
-import {Url} from  '../../../../../providers/APIUrlProvider.js'
-import Card from  '../../../../../providers/Card.js'
+import {Url} from  '../../../../../providers/api/APIUrlProvider.js'
 //partials
 import HeaderTwo from '../../../partials/headerTwo.js'
 import TextCard from '../../../partials/textCard.js'
 import Iframe from '../../../partials/iframe.js'
+import Card from '../../../partials/Card.js'
 //compnents
 import HiddenTechnologyList from './HiddenTechnologyList.js'
-import PlaceHolder from '../../placeholder/PlaceHolder.js'
-
+import PlaceHolder from '../placeholder/PlaceHolder.js'
 //api 
-import {loadHome, loadTech} from './homeAPI.js'
+import {loadHome, loadTech} from './api'
 function Home(props){
     //provider state 
     const {url} = Url()
