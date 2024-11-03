@@ -4,7 +4,7 @@ import PlaceHolder from '../placeholder/PlaceHolder'
 import Error from '../error/Error'
 import api from './api'
 import template from './template'
-function Experience(){
+function Experience(props){
     const {url} = Url();
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)

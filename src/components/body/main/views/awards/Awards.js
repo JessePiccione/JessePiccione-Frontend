@@ -1,25 +1,20 @@
-//React
 import React, {useState, useEffect} from 'react'
-//Providers
 import {Url} from '../../../../../providers/api/APIUrlProvider'
-//Components
 import PlaceHolder from '../placeholder/PlaceHolder'
 import Error from '../error/Error'
-//partials
 import HeaderTwo from '../../../partials/headerTwo'
-import ListGroupItem from '../../../partials/listGroupItem' 
 import Card from '../../../partials/Card'
-//awardsAPI
-import {loadAwards} from './api'
+import api from './api'
+import template from './template'
 function Awards(){
     const {url} = Url()
+    const [error, setError] = useState(null)
+    const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true)
     const [animation, setAnimation] = useState(false)
-    const [error, setError] = useState(null)
-    const [awards, setAwards] = useState(null)
-    const fetchAwards = async () =>{
+    const fetchData = async () =>{
         try{
-            setAwards(await loadAwards(url))
+            setData(await api(url))
         }
         catch (error){
             setError(error)
@@ -30,18 +25,17 @@ function Awards(){
             setLoading(false)
         }
     }//eslint-disable-next-line 
-    useEffect(()=>{fetchAwards()},[])
-    return (loading ||awards)?(
-        (loading)?<PlaceHolder className={(animation)?'transitionOut':''} />:
+    useEffect(()=>{fetchData()},[])
+    return (loading || data)?
+    (loading?
+        <PlaceHolder className={(animation)?'transitionOut':''} />:
         <div className='row transitionIn justify-content-md-center'>
             <div className='col-12 col-xxl-6 pt-3'>
                 <Card>
                     <HeaderTwo title='Awards & Certifications'/>
                     <div className='rounded shadow-sm p-2'>
                         <ul className='list-group'>
-                            {
-                                awards.map(item=><ListGroupItem  key={item.title+'-outer'} name={item.title} text={`${item.title} - ${item.year}`}/>)
-                            }
+                            {data.map(template)}
                         </ul>
                     </div>
                 </Card>

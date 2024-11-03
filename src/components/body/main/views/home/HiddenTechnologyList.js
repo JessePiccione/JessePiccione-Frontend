@@ -6,7 +6,7 @@ function HiddenTechnologyList(props){
             </button>
             <div className='collapse' id ={`technologies_${props.id}`}>
                 <ul className='list-group shadow-sm p-2 rounded mb-2'>  
-                    {props.technology.filter((item=>item.pageEntry===props.id)).map((item,index)=>{
+                    {props.technology.map((item)=>{
                         return <li key={item.description} className='list-group-item list-group-item-action'><b>{item.title}</b>-{item.description}.</li>
                     })}    
                 </ul>
