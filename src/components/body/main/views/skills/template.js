@@ -1,3 +1,5 @@
+import HeaderTwo from '../../../partials/headerTwo'
+import ListGroupItem from '../../../partials/listGroupItem'
 export const template  = (item) => { return (
     <div key={item.category_name} className='col-12 col-xxl-6 pt-3'>
         <div className='p-3 shadow-sm rounded d-flex flex-column justify-content-start' style={{'minHeight':'100%'}}>
@@ -13,3 +15,4 @@ export const template  = (item) => { return (
         </div>
     </div>
 )}
+export default template;

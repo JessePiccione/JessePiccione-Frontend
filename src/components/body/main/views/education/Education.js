@@ -4,7 +4,7 @@ import PlaceHolder from '../placeholder/PlaceHolder'
 import Error from '../error/Error'
 import template from './template'
 import api from './api'
-function Education(){   
+function Education(props){   
     const {url} = Url()
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
