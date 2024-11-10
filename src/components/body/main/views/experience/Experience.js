@@ -5,7 +5,7 @@ import Error from '../error/Error'
 import api from './api'
 import template from './template'
 function Experience(){
-    const {url} = Url();
+    const {url} = Url()
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)

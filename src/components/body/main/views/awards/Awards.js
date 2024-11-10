@@ -27,4 +27,4 @@ function Awards(){
         </div>
     ):(<Error message={error.message}/>)
 }
-export default Awards;
+export default Awards

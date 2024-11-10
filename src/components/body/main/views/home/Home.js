@@ -20,7 +20,7 @@ function Home(){
         }
     }//eslint-disable-next-line
     useEffect(()=>{loadData()}, [])
-    return (loading || data)? 
+    return (loading || data)?
         (loading?<PlaceHolder className={(animation)?"transitionOut":''}/>:
         <div className='row transitionIn justify-content-md-center'>
             { data.map(template) }
