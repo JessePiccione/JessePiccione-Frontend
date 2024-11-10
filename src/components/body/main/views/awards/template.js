@@ -13,7 +13,6 @@ export const template = ({title, issuer, year, awards}) =>{
                 </div>
             </Card>
         </div>
-
     )
 }
 export default template;
