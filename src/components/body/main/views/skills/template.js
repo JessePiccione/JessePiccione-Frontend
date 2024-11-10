@@ -7,9 +7,10 @@ export const template  = (item) => { return (
             <div className='p-2 rounded shadow-sm'>
                 <ul className='list-group'>
                     {
-                       item.skills.filter(value=>value.category === item.id).map((item)=>{
+                       item.skills.map((item)=>{
                             return <ListGroupItem key={item.name+item.name+''} name={item.name} text={item.name}/>
-                    })}
+                        })
+                    }
                 </ul>    
             </div>    
         </div>

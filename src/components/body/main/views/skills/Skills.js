@@ -1,19 +1,19 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import {Url} from '../../../../../providers/api/APIUrlProvider'
 import PlaceHolder from '../placeholder/PlaceHolder'
 import Error from '../error/Error'
-import template from './template'
 import api from './api'
-function Skills(props){
+import template from './template'
+function Skills(){
     const {url} = Url()
-    const [data , setData] = useState(null)
+    const [data, setData] = useState(null)
+    const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
     const [animation, setAnimation] = useState(false)
-    const [error, setError] = useState(null)
     const loadData = async () =>{
         try { setData(await api(url)) }
         catch (error){ setError(error) }
-        finally{
+        finally {
             setAnimation(true)
             await new Promise(resolve => setTimeout(resolve,1000))
             setLoading(false)

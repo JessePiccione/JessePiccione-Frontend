@@ -6,27 +6,24 @@ import api from './api'
 import template from './template'
 function Awards(){
     const {url} = Url()
-    const [error, setError] = useState(null)
     const [data, setData] = useState(null)
+    const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
     const [animation, setAnimation] = useState(false)
-    const fetchData = async () =>{
-        try{ setData(await api(url)) }
+    const loadData = async () =>{
+        try { setData(await api(url)) }
         catch (error){ setError(error) }
-        finally{
+        finally {
             setAnimation(true)
-            await new Promise((resolve)=>setTimeout(resolve,1000))
+            await new Promise(resolve => setTimeout(resolve, 1000))
             setLoading(false)
         }
     }//eslint-disable-next-line 
-    useEffect(()=>{fetchData()},[])
+    useEffect(()=>{loadData()},[])
     return (loading || data)?
-    (loading?
-        <PlaceHolder className={(animation)?'transitionOut':''} />:
+        (loading?<PlaceHolder className={(animation)?'transitionOut':''}/>:
         <div className='row transitionIn justify-content-md-center'>
-            <div className='col-12 col-xxl-6 pt-3'>
-                {data.map(template)}
-            </div>
+            {data.map(template)}
         </div>
     ):(<Error message={error.message}/>)
 }
