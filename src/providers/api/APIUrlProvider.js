@@ -1,8 +1,8 @@
 
-import {useState,createContext,useEffect,useContext} from 'react'
+import {useState, createContext, useContext} from 'react'
 const APIUrlContext = createContext();
-const URL = 'https://REDACTED_URL_PLACEHOLDER/'
-const TOKEN = 'REDACTED_TOKEN_PLACEHOLDER'
+const URL = process.env.REACT_APP_BACKEND_API_URL
+const TOKEN = process.end.REACT_APP_BACKEND_API_TOKEN
 const APIUrlProvider = ({children}) =>{
     const [context, setContext] = useState({
         token:TOKEN,
@@ -13,6 +13,6 @@ const APIUrlProvider = ({children}) =>{
             {children}
         </APIUrlContext.Provider>
     )
-};
-export const Url = () => useContext(APIUrlContext);
-export default APIUrlProvider;
+}
+export const Url = () => useContext(APIUrlContext)
+export default APIUrlProvider
