@@ -14,7 +14,7 @@ function AppLoader() {
   const [loadingState, setLoadingState] = useState({loading:true,error:null});
   const wakeUpCall = async () =>{
     try{
-      const request = await fetch('https://REDACTED_URL_PLACEHOLDER/')//'https://literate-space-enigma-6wq4rw6577rfrr4j-8080.app.github.dev/'
+      const request = await fetch(process.env.REACT_APP_BACKEND_API_URL+'api/')//'https://literate-space-enigma-6wq4rw6577rfrr4j-8080.app.github.dev/'
       await request.text()
     }
     catch (error) {

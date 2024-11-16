@@ -12,9 +12,9 @@ function OffCanvas(){
         const fetchMessageForm = async () =>{
                 try {
                     setSent(true)
-                    const request = await fetch(url+'message/',{method:"GET",headers:{
+                    const request = await fetch(url+'message/',{credentials:"include", method:"GET",headers:{
                         'Authorization':`Token ${token}`
-                      }})
+                      }}, )
                     const response = await request.text()
                     setForm(response)
                 }

@@ -1,11 +1,9 @@
 import {useState, createContext, useContext} from 'react'
 const APIUrlContext = createContext();
-const URL = process.env.REACT_APP_BACKEND_API_URL
-const TOKEN = process.end.REACT_APP_BACKEND_API_TOKEN
-const APIUrlProvider = ({children}) =>{
+const APIUrlProvider = ({children}) =>{//eslint-disable-next-line
     const [context, setContext] = useState({
-        token:TOKEN,
-        url:URL
+        url:process.env.REACT_APP_BACKEND_API_URL,
+        token:process.env.REACT_APP_BACKEND_API_TOKEN
     })
     return (   
         <APIUrlContext.Provider value={context}>

@@ -22,7 +22,8 @@ const Assistant = () =>{
                         headers:{
                             'Authorization':`Token ${token}`
                         },
-                        body:JSON.stringify({message:m})
+                        body:JSON.stringify({message:m}),
+                        credentials:'include'
                     })
                     const response = await request.json()
                     temp.pop()
