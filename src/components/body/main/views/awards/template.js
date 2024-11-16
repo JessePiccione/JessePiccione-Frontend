@@ -3,7 +3,7 @@ import HeaderTwo from '../../../partials/headerTwo'
 import ListGroupItem from '../../../partials/listGroupItem'
 export const template = ({title, issuer, year, awards}) =>{
     return (
-        <div className='col-12 col-xxl-6 pt-3'>
+        <div className='col-12 col-xxl-6 pt-3 d-flex flex-column justify-content-start'>
             <Card>
                 <HeaderTwo title={((issuer)?`${issuer} - `:'')+(`${title}`)+((year)?` - ${year}`:'')}/>
                 <div className='rounded shadow-sm p-2'>

@@ -22,7 +22,7 @@ function Education(){
     useEffect(()=>{loadData()},[])
     return (loading || data)? 
         (loading?<PlaceHolder className={(animation)?'transitionOut':''}/>:
-        <div className='row transitionIn justify-content-md-center'>
+        <div className='row transitionIn justify-content-xl-center'>
             {data.map(template)}
         </div>
     ):(<Error message={error.message}/>)

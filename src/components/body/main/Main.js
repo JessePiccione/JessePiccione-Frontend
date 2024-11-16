@@ -23,8 +23,8 @@ const Main = () => {
         <div>
             <MemoNav/>
             <main>
-                <div className='container-fluid m-0 p-0 z-3 d-flex flex-column justify-content-center' style={{minHeight:'70vh'}}> 
-                    <div id ="mainContentContainer" className='container-fluid col-12 col-xxl-7'>
+                <div className='container-fluid m-0 p-0 z-3 d-flex flex-column' style={{minHeight:'70vh'}}> 
+                    <div id ="mainContentContainer" className='container-fluid col-12 col-xxl-10'>
                         <Routes id='mainContentContainer'>
                             <Route path='/' element={<MemoHome/>}></Route>
                             <Route path='/experience' element={<MemoExperience/>}></Route>
@@ -34,7 +34,7 @@ const Main = () => {
                             <Route path='/awards' element={<MemoAwards/>}></Route>
                         </Routes>
                     </div>
-                    <div className="container-fluid col-12 col-xxl-7">
+                    <div className="container-fluid col-12 col-xxl-10">
                         <div className='row justify-content-md-center'>
                             <div className='col-12 col-xxl-6 pt-3'>
                                 <Card>

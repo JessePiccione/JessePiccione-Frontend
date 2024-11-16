@@ -2,7 +2,7 @@ import NavList from '../main/nav/NavList'
 function Footer(){
     return (
         <footer className='container-fluid text-light primary-color bg-gradient d-flex justify-content-center'>
-            <div className="col-12 col-xxl-7">
+            <div className="col-12 col-xxl-10">
                 <nav className="pt-3">
                     <NavList/>
                 </nav>

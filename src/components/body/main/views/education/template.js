@@ -3,10 +3,10 @@ import HeaderTwo from '../../../partials/headerTwo'
 import ListGroupItem from '../../../partials/listGroupItem'
 export const template = (item)=>{
     return (
-        <div key={item.degree_type} className='col-12 col-xxl-6 pt-3'>
+        <div key={item.degree_type} className='col-12 col-xxl-6 pt-3 d-flex flex-column justify-content-start'>
             <Card>
                 <HeaderTwo title={item.degree_type}/>
-                <div className='col-12 bg-white rounded shadow-sm p-2'>
+                <div className='rounded shadow-sm p-2'>
                     <ul className='list-group'>
                         <ListGroupItem text={item.school_name}/>
                         <ListGroupItem text={item.location}/>

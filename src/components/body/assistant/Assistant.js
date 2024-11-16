@@ -43,7 +43,7 @@ const Assistant = () =>{
     useEffect(()=>{if(messageRows) messageRows.scrollTop = messageRows.scrollHeight})
     return (
         <div className="container-fluid text-light my-2 sticky-bottom d-flex justify-content-center">
-            <div className='row col-12 col-xxl-7 d-flex justify-content-end'>
+            <div className='row col-12 col-xxl-10 d-flex justify-content-end'>
                 <div className='col-12 col-sm-7 col-md-6 col-lg-5 col-xl-3 col-xxl-6' style={{zIndex:1020}}>
                     <div className='accordion' id='accordianAssistant'  data-bs-theme='dark'>
                         <div className="accordion-item">
