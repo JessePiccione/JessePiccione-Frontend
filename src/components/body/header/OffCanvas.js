@@ -27,7 +27,7 @@ function OffCanvas(){
         }   
         if(!sent) fetchMessageForm();
     })
-    if(loading || form ) return (   
+    if(loading || form) return (   
         <div className='offcanvas offcanvas-bottom bg-light' data-bs-auto-close='true' style={{minHeight:'90vh'}} tabIndex='-1' id='offCanvasForm' aria-labelledby="offCanvasFormLabel" >
         <div className='offcanvas-header primary-color bg-gradient m-2 mb-0'>
             <h3 className='offcanvas-title text-white text-center' id='offCanvasFormLabel'>Leave a Message</h3>

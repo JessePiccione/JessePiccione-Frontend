@@ -1,5 +1,5 @@
 import NavList from '../main/nav/NavList'
-function Footer(){
+const Footer = () =>{
     return (
         <footer className='container-fluid text-light primary-color bg-gradient d-flex justify-content-center'>
             <div className="col-12 col-xxl-10">
