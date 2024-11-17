@@ -1,8 +1,12 @@
 {
   "name": "jessepiccione-info-frontend",
-  "version": "0.1.0",
+  "version": "2.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/node": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -19,6 +23,7 @@
     "start_production": "serve -s build -l 8080",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:ssr": "npm run build && npx babel-node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
