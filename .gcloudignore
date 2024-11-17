@@ -20,3 +20,5 @@ public/
 # Source Code
 src/
 #
+git-filter-repo
+text.txt
