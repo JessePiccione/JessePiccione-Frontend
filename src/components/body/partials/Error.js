@@ -1,4 +1,4 @@
-import HeaderTwo from "../../../partials/headerTwo";
+import HeaderTwo from "./headerTwo";
 export const Error = ({message}) =>{
     return (
         <div className='row transitionIn justify-content-md-center'>

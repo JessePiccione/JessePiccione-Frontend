@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-
+//Render Props Component for api data retrieval//
 export const ViewRenderer = ({render, url}) =>{
     const [data, setData] = useState([])
     const loadData = async () =>{ 

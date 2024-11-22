@@ -1,7 +1,7 @@
 import HeaderTwo from '../../../partials/headerTwo.js'
 import ListGroupItem from '../../../partials/listGroupItem.js'
 import Card from '../../../partials/Card.js'
-export const entry = (obj) => {
+const temp = (obj) => {
     return (
         <div key={obj.title_held} className='col-12 col-xxl-6 pt-3 d-flex flex-column justify-content-start'>
             <Card>
@@ -16,5 +16,5 @@ export const entry = (obj) => {
             </Card>
         </div>
     )
-}
-export default entry;
+}//eslint-disable-next-line
+export default ({data})=> data.map(temp)

@@ -1,7 +1,7 @@
 import Card from '../../../partials/Card'
 import HeaderTwo from '../../../partials/headerTwo'
 import ListGroupItem from '../../../partials/listGroupItem'
-export const template = item =>{ return (
+const temp = item =>{ return (
         <div key={item.name} className='col-12 col-xxl-6 pt-3 d-flex flex-column justify-content-start'>
             <Card>
                 <HeaderTwo title={item.name}/>
@@ -16,4 +16,4 @@ export const template = item =>{ return (
         </div>
     )
 }
-export default template
+export default ({data})=>data.map(temp)

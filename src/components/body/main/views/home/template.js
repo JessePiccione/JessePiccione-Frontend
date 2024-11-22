@@ -3,7 +3,7 @@ import TextCard from '../../../partials/textCard.js'
 import Iframe from '../../../partials/iframe.js'
 import Card from '../../../partials/Card.js'
 import HiddenTechnologyList from './HiddenTechnologyList.js'
-export const homeTemplate = (obj) => {
+const temp = (obj) => {
     return (
         <div key={obj.title} className='col-12 col-xxl-6 pt-3 d-flex flex-column justify-content-start'>
             <Card> 
@@ -14,5 +14,5 @@ export const homeTemplate = (obj) => {
             </Card>
         </div>
     )
-}
-export default homeTemplate;
+}//eslint-next-line-disable
+export default ({data})=>data.map(temp)

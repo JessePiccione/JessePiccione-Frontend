@@ -25,14 +25,16 @@ const Main = () => {
             <main>
                 <div className='container-fluid m-0 p-0 z-3 d-flex flex-column' style={{minHeight:'70vh'}}> 
                     <div id ="mainContentContainer" className='container-fluid col-12 col-xxl-10'>
-                        <Routes id='mainContentContainer'>
-                            <Route path='/' element={<MemoHome/>}></Route>
-                            <Route path='/experience' element={<MemoExperience/>}></Route>
-                            <Route path='/education' element={<MemoEducation/>}></Route>
-                            <Route path='/projects' element={<MemoProjects/>}></Route>
-                            <Route path='/skills' element={<MemoSkills/>}></Route>
-                            <Route path='/awards' element={<MemoAwards/>}></Route>
-                        </Routes>
+                        <div className='row transitionIn justify-content-md-center'>
+                            <Routes id='mainContentContainer'>
+                                <Route path='/' element={<MemoHome/>}></Route>
+                                <Route path='/experience' element={<MemoExperience/>}></Route>
+                                <Route path='/education' element={<MemoEducation/>}></Route>
+                                <Route path='/projects' element={<MemoProjects/>}></Route>
+                                <Route path='/skills' element={<MemoSkills/>}></Route>
+                                <Route path='/awards' element={<MemoAwards/>}></Route>
+                            </Routes>
+                        </div>
                     </div>
                     <div className="container-fluid col-12 col-xxl-10">
                         <div className='row justify-content-md-center'>
