@@ -10,10 +10,13 @@ const withTransition = ({path,Template}) => {
             url={`${url+path}`}
             render={(data)=>{
                 return (
-                    data.length?        
-                        (!data[0].message?<Template className='TransitionIn' data={data}/>:
-                            <Error message={data[0].message}/>):
-                        (<PlaceHolder/>)
+                    <div className='transitionIn'> {                
+                        data.length?        
+                            (!data[0].message?<Template data={data}/>:
+                                <Error message={data[0].message}/>):
+                            (<PlaceHolder/>)
+                            }
+                    </div>
                 )
             }}
         />
