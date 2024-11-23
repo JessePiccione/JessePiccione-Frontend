@@ -12,12 +12,23 @@ app.get('*', (req,res)=>{
     const html = renderToString(
         <StaticRouter location={req.url} context={context}>
             <App/>
+            <script>
+            const {hydrateRoot} = require('react-dom/client')
+            const App = require('../../../src/App')
+            function imThirsty(){
+                hydrateRoot(
+                    document.querySelector('#root'),
+                    <App/>
+                )
+            }       
+            imThirsty();
+            </script>
         </StaticRouter>
     )
     const file = path.resolve('./build/index.html')
     res.sendFile(file, {headers:{'Content-Type':'text/html'}},(err)=>{
         if(err) res.status(500).send(err)
-        else res.send(file.replace('<div id="root></div>',`<div id="root">${html}</div>`))
+        else res.send(file.replace('<div id="root"></div>',`<div id="root">${html}</div>`))
     })
 })
 app.listen(PORT,()=>{
