@@ -12,7 +12,6 @@
 # below:
 .git
 .gitignore
-package.json
 # Node.js dependencies:
 node_modules/
 # Development Dependencies 
@@ -20,5 +19,3 @@ public/
 # Source Code
 src/
 #
-git-filter-repo
-text.txt

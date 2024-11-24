@@ -1,34 +1,28 @@
 const React = require('react')
 const express = require('express')
 const path = require('path')
+const fs = require('fs')
 const {renderToString} = require('react-dom/server')
 const {StaticRouter} = require('react-router-dom/server')
 const App = require('./src/App').default
 const PORT = process.env.PORT || 8000
 const app = express()
-app.use(express.static(path.resolve(__dirname,'build')))
-app.get('*', (req,res)=>{
-    const context = {}
-    const html = renderToString(
-        <StaticRouter location={req.url} context={context}>
+app.use(express.static(path.join(__dirname,'../build/'), {index:false}));
+app.get('*', function(req,res){
+    const appHtml = renderToString(
+        <StaticRouter location={req.url}>
             <App/>
-            <script>
-            const {hydrateRoot} = require('react-dom/client')
-            const App = require('../../../src/App')
-            function imThirsty(){
-                hydrateRoot(
-                    document.querySelector('#root'),
-                    <App/>
-                )
-            }       
-            imThirsty();
-            </script>
         </StaticRouter>
     )
-    const file = path.resolve('./build/index.html')
-    res.sendFile(file, {headers:{'Content-Type':'text/html'}},(err)=>{
-        if(err) res.status(500).send(err)
-        else res.send(file.replace('<div id="root"></div>',`<div id="root">${html}</div>`))
+    const file = path.resolve(__dirname, '../build', 'index.html')
+    fs.readFile(file, 'utf8',(err, data)=>{
+        if(err) {
+            res.status(500).send(err)
+            console.error(err)
+            return
+        }
+        const html = data.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`)
+        res.send(html)
     })
 })
 app.listen(PORT,()=>{
