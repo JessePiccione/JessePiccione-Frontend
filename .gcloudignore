@@ -14,8 +14,4 @@
 .gitignore
 # Node.js dependencies:
 node_modules/
-# Development Dependencies 
-public/
-# Source Code
-src/
-#
+
