@@ -26,5 +26,8 @@ babel.config.json
 server.js
 # webpack configuration to compile minify and change the srccode 
 webpack.server.config.js
+<<<<<<< HEAD
 #useless packagae-lock file that usaully causes more issues in development than neccessary 
 package-lock.json 
+=======
+>>>>>>> 628ee3a (quick fix to a w)
