@@ -38,8 +38,8 @@ module.exports = {
     devtool: 'source-map',// Generates source maps for easier debugginh 
     plugins:[
         new webpack.DefinePlugin({
-            'process.env.API_URL':JSON.stringify(process.env.API_URL),
-            'process.env.NODE_ENV': JSON.stringify('production')
+            'process.env.REACT_APP_BACKEND_API_URL':JSON.stringify(process.env.REACT_APP_BACKEND_API_URL),
+            'process.env.REACT_APP_BACKEND_API_TOKEN': JSON.stringify(process.env.REACT_APP_BACKEND_API_TOKEN)
         }),
     ],
 };

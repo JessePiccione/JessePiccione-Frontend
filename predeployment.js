@@ -19,8 +19,8 @@ const text = `runtime: nodejs22
 instance_class: F1
 entrypoint: npm start
 env_variables: 
-    REACT_APP_BACKEND_API_URL: ${process.env.REACT_APP_BACKEND_API_URL}
-    REACT_APP_BACKEND_API_TOKEN: ${process.env.REACT_APP_BACKEND_API_TOKEN}
+  REACT_APP_BACKEND_API_URL: ${process.env.REACT_APP_BACKEND_API_URL}
+  REACT_APP_BACKEND_API_TOKEN: ${process.env.REACT_APP_BACKEND_API_TOKEN}
 automatic_scaling:
   target_cpu_utilization: 0.65
   min_instances: 1
