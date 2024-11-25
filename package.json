@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "node dist/server.bundle.js",
-    "build-server": "react-scripts build && npx webpack "
+    "build-server": "react-scripts build && npx webpack --config webpack.server.config.js"
   },
   "eslintConfig": {
     "extends": [

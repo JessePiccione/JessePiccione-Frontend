@@ -14,4 +14,17 @@
 .gitignore
 # Node.js dependencies:
 node_modules/
-
+# Unpacked website statics 
+public/
+# Untranspiled source code 
+src/
+# useless README file that is from create reate application 
+README.md 
+# babel configuration used in conjunction with web pack to transpile server 
+babel.config.json
+# untranspiled server 
+server.js
+# webpack configuration to compile minify and change the srccode 
+webpack.server.config.js
+#useless packagae-lock file that usaully causes more issues in development than neccessary 
+package-lock.json 

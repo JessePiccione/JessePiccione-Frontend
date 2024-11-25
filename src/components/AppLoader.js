@@ -14,7 +14,7 @@ function AppLoader() {
   const [loadingState, setLoadingState] = useState({loading:true,error:null});
   const wakeUpCall = async () =>{
     try{
-      const request = await fetch(process.env.REACT_APP_BACKEND_API_URL+'api/',{credentials:"include"})
+      await fetch(process.env.REACT_APP_BACKEND_API_URL+'api/',{credentials:"include"})
     }
     catch (error) {
       setLoadingState({...loadingState, error:error})
