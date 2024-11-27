@@ -1,26 +1,24 @@
 {
   "name": "jessepiccione-info-frontend",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "dependencies": {
-    "@babel/cli": "7.25.9",
-    "@babel/node": "^7.26.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "null-loader": "^4.0.1",
+    "express": "^4.21.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
-    "react-scripts": "5.0.1",
-    "serve": "^14.2.4",
     "three": "^0.121.0",
     "vanta": "^0.5.24",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node dist/server.bundle.js",
-    "build-server": "react-scripts build && npx webpack --config webpack.server.config.js"
+    "start": "NODE_ENV=production node dist/server.bundle.js",
+    "start-dev":"NODE_ENV=development npm run build-server && npm run start",
+    "install-prod": "npm run clear && NODE_ENV=production npm install",
+    "install-dev": "npm run clear && NODE_ENV=development npm install",
+    "build-server": "react-scripts build && webpack --config webpack.server.config.js",
+    "clear":"rm -rf node_modules && rm package-lock.json",
+    "deploy":"npm run install-dev && npm run build-server && npm run install-prod && gcloud init --skip-diagnostics && gcloud app deploy"
   },
   "eslintConfig": {
     "extends": [
@@ -42,9 +40,15 @@
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-private-property-in-object": "^7.25.9",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
     "babel-loader": "^9.2.1",
+    "null-loader": "^4.0.1",
+    "react-scripts": "^5.0.1",
     "terser-webpack-plugin": "^5.3.10",
     "typescript": "^4.9.5",
     "webpack": "^5.96.1",

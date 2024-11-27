@@ -11,33 +11,23 @@ import HeaderTwo from '../partials/headerTwo.js'
 import OffCanvasButton from './OffCanvasButton.js'
 import Card from '../partials/Card.js'
 const Main = () => {
-    const MemoHome = memo(Home, [])
-    const MemoExperience = memo(Experience, [])
-    const MemoEducation = memo(Education, [])
-    const MemoProjects = memo(Projects, [])
-    const MemoSkills = memo(Skills, [])
-    const MemoAwards = memo(Awards, [])
-    const MemoNav = memo(Nav, [])
-    const MemoOffCanvasButton = memo(OffCanvasButton, [])
     return (
         <div>
-            <MemoNav/>
+            <Nav/>
             <main>
-                <div className='container-fluid m-0 p-0 z-3 d-flex flex-column' style={{minHeight:'70vh'}}> 
+                <div className='container-fluid z-3 d-flex flex-column' style={{minHeight:'70vh'}}> 
                     <div id ="mainContentContainer" className='container-fluid col-12 col-xxl-10'>
-                        <div className='row transitionIn justify-content-md-center'>
-                            <Routes id='mainContentContainer'>
-                                <Route path='/' element={<MemoHome/>}></Route>
-                                <Route path='/experience' element={<MemoExperience/>}></Route>
-                                <Route path='/education' element={<MemoEducation/>}></Route>
-                                <Route path='/projects' element={<MemoProjects/>}></Route>
-                                <Route path='/skills' element={<MemoSkills/>}></Route>
-                                <Route path='/awards' element={<MemoAwards/>}></Route>
-                            </Routes>
-                        </div>
+                        <Routes>
+                            <Route path='/' element={<Home/>}></Route>
+                            <Route path='/experience' element={<Experience/>}></Route>
+                            <Route path='/education' element={<Education/>}></Route>
+                            <Route path='/projects' element={<Projects/>}></Route>
+                            <Route path='/skills' element={<Skills/>}></Route>
+                            <Route path='/awards' element={<Awards/>}></Route>
+                        </Routes>
                     </div>
                     <div className="container-fluid col-12 col-xxl-10">
-                        <div className='row justify-content-md-center'>
+                        <div className='row m-0 d-flex flex-row justify-content-center'>
                             <div className='col-12 col-xxl-6 pt-3'>
                                 <Card>
                                     <HeaderTwo title='Leave a Message'/>
@@ -45,7 +35,7 @@ const Main = () => {
                                         <p className='card-text text-center'>
                                             Click the button below to open the Message Form.
                                         </p>
-                                        <MemoOffCanvasButton/>
+                                        <OffCanvasButton/>
                                     </div>
                                 </Card>
                             </div>
@@ -53,8 +43,7 @@ const Main = () => {
                     </div>
                 </div>
             </main>
-        </div>
-        
-    );
-};
-export default Main;
+        </div>       
+    )
+}
+export default Main

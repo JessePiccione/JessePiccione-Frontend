@@ -10,7 +10,7 @@ const withTransition = ({path,Template}) => {
             url={`${url+path}`}
             render={(data)=>{
                 return (
-                    <div className='transitionIn'> {                
+                    <div className='row transitionIn m-0 d-flex flex-row justify-content-center'> {                
                         data.length?        
                             (!data[0].message?<Template data={data}/>:
                                 <Error message={data[0].message}/>):

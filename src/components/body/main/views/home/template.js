@@ -5,7 +5,7 @@ import Card from '../../../partials/Card.js'
 import HiddenTechnologyList from './HiddenTechnologyList.js'
 const temp = (obj) => {
     return (
-        <div key={obj.title} className='col-12 col-xxl-6 pt-3 d-flex flex-column justify-content-start'>
+        <div key={obj.title} className='col-12 col-xxl-6 pt-3'>
             <Card> 
                 <HeaderTwo title={obj.title}/>
                 <TextCard text={obj.description}/>
