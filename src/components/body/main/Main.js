@@ -15,7 +15,7 @@ const Main = () => {
         <div>
             <Nav/>
             <main>
-                <div className='container-fluid z-3 d-flex flex-column' style={{minHeight:'70vh'}}> 
+                <div className='container-fluid z-3 d-flex flex-column p-0' style={{minHeight:'70vh'}}> 
                     <div id ="mainContentContainer" className='container-fluid col-12 col-xxl-10'>
                         <Routes>
                             <Route path='/' element={<Home/>}></Route>
@@ -27,7 +27,7 @@ const Main = () => {
                         </Routes>
                     </div>
                     <div className="container-fluid col-12 col-xxl-10">
-                        <div className='row m-0 d-flex flex-row justify-content-center'>
+                        <div className='row d-flex flex-row justify-content-center'>
                             <div className='col-12 col-xxl-6 pt-3'>
                                 <Card>
                                     <HeaderTwo title='Leave a Message'/>
