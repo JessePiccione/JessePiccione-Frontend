@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with JessePiccione-Info-Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and extended with additional configurations for server-side rendering and deployment.
 
 ## Available Scripts
 
@@ -8,63 +8,60 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the production mode.  
+The server starts using the bundled server file. Make sure to build the server before running this script.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `npm run start-dev`
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the app in the development mode.  
+This script builds the server and starts it with development settings.  
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Installs production dependencies. This prepares the project for deployment.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run build-server`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the React app and bundles the server for production.  
+The React app will be stored in the `build` folder, while the server will be bundled based on the Webpack configuration.
 
-### `npm run eject`
+### `npm run clear`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Removes `node_modules` and `package-lock.json` to ensure a clean install environment.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `npm run deploy`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Automates the deployment process by:
+1. Installing development dependencies.
+2. Building the server.
+3. Installing production dependencies.
+4. Initializing Google Cloud settings.
+5. Deploying the app to Google Cloud.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `npm run install-prod`
+
+Installs production dependencies with detailed logging for troubleshooting.
+
+### `npm run install-dev`
+
+Installs development dependencies with detailed logging for troubleshooting.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is set up to be deployed on **Google Cloud**.  
+For detailed instructions on deploying Create React App projects, see the [Create React App documentation](https://facebook.github.io/create-react-app/docs/deployment).
 
-### `npm run build` fails to minify
+### Server-Side Rendering
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app uses **Express** for server-side rendering. Ensure the server is built before running in production mode.  
+
+### Technologies Used
+
+- **React**: For building the frontend user interface.
+- **Express**: For serving the app and enabling server-side rendering.
+- **Three.js** and **Vanta.js**: For stunning visual effects.
+- **React Router DOM**: For managing client-side routing.
+
+To learn more about React, visit the [React documentation](https://reactjs.org/).
