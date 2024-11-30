@@ -14,5 +14,5 @@ export const temp = ({title, issuer, year, awards}) =>{
             </Card>
         </div>
     )
-}//eslint-disable-next-line
+}// eslint-disable-next-line
 export default ({data}) => data.map(temp)

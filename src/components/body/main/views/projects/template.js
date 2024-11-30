@@ -15,5 +15,5 @@ const temp = item =>{ return (
             </Card>
         </div>
     )
-}
+} // eslint-disable-next-line
 export default ({data})=>data.map(temp)

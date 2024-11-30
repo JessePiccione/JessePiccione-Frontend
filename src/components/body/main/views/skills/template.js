@@ -11,5 +11,5 @@ export const temp  = ({id, category_name, skills}) => { return (
             </div>    
         </div>
     </div>
-)}
+)}// eslint-disable-next-line
 export default ({data})=>data.map(temp)

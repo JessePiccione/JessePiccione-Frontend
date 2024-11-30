@@ -14,5 +14,5 @@ const temp = (obj) => {
             </Card>
         </div>
     )
-}//eslint-next-line-disable
+}// eslint-next-line-disable
 export default ({data})=>data.map(temp)
