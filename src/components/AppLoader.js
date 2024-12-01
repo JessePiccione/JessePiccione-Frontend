@@ -11,26 +11,18 @@ import Footer from './body/footer/Footer.js'
 import Card from './body/partials/Card.js'
 import HeaderTwo from './body/partials/headerTwo.js'
 function AppLoader() {
-  const [loadingState, setLoadingState] = useState({loading:true,error:null});
+  const [loadingState, setLoadingState] = useState({loading:true});
   const wakeUpCall = async () =>{
-    try{
-      await fetch(process.env.REACT_APP_BACKEND_API_URL+'api/',{credentials:"include"})
-    }
-    catch (error) {
-      setLoadingState({...loadingState, error:error})
-    }
-    finally{
-      await new Promise(resolve=> setTimeout(resolve, 500))
-      setLoadingState({...loadingState, loading:false})
-    }
+    await new Promise(resolve=> setTimeout(resolve, 500))
+    setLoadingState({loading:false})
   }//eslint-disable-next-line 
   useEffect(()=>{wakeUpCall()},[])
-  return(loadingState.loading || loadingState.error)?(
+  return(loadingState.loading)?(
     <div className='row app'>
       <div className="col-12 d-flex primary-color bg-gradient" style={{height:'100vh'}}>
         <div className='col-10 col-xxl-6 m-auto'>
           <Card>
-            <HeaderTwo title={(loadingState.error)?loadingState.error.message:'Initiating Backend Services...'}/>
+            <HeaderTwo title='Initiating Backend Services...'/>
             <img className='img-fluid m-auto rounded-profile rotate' style={{
               minHeight:'250px',
               minWidth:'250px'

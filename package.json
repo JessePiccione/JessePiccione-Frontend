@@ -4,22 +4,24 @@
   "private": true,
   "dependencies": {
     "express": "^4.21.1",
+    "http": "^0.0.1-security",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
-    "three": "^0.121.0",
+    "three": "^0.171.0",
     "vanta": "^0.5.24",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "ws": "^8.18.0"
   },
   "scripts": {
     "start": "NODE_ENV=production node dist/server.bundle.js",
     "build": "NODE_ENV=production npm install",
-    "start-dev":"NODE_ENV=development npm run build-server && npm run start",
+    "start-dev": "NODE_ENV=development npm run build-server && NODE_ENV=development node dist/server.bundle.js",
     "install-prod": "NODE_ENV=production npm install --loglevel silly",
     "install-dev": "NODE_ENV=development npm install --loglevel silly",
     "build-server": "react-scripts build && webpack --config webpack.server.config.js",
-    "clear":"rm -rf node_modules | rm package-lock.json",
-    "deploy":"npm run install-dev && npm run build-server && npm run install-prod && gcloud init --skip-diagnostics && gcloud app deploy"
+    "clear": "rm -rf node_modules | rm package-lock.json",
+    "deploy": "npm run install-dev && npm run build-server && npm run install-prod && gcloud init --verbosity=debug && gcloud app deploy --verbosity=debug"
   },
   "eslintConfig": {
     "extends": [
