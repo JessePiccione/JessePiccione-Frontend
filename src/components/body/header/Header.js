@@ -29,13 +29,15 @@ function Header(){
                         <div className='col-12 col-xxl-6 my-2'>
                             <div className={`card text-white bg-dark border-0 shadow-sm`} style={{minHeight:"100%", '--bs-bg-opacity':'0'}}>
                                 <div className='card-body d-flex flex-column justify-content-between'>
-                                    <HeaderTwo title='JessePiccione.info Version 2.3 SSR React App'/>
+                                    <HeaderTwo title='JessePiccione.info Version 2.4 Server Side Rendering React App'/>
                                     <div className={`bg-opacity-0 border-0 shadow-sm`} style={{minHeight:"100%"}}>
                                         <div className='d-flex flex-column justify-content-between'>
                                             <p>
-                                                JessePiccione.info Version 2.3
+                                                JessePiccione.info Version 2.4
                                             <br/>
                                                 A 4-Tier Advanced Resume Platform.
+                                            <br/>
+                                                Now utilizing WebSocket for apis 
                                             <br/>                    
                                             <a id='annoucement-link' className='card-text' href={url}>Original Django Application</a>
                                             </p>                     
