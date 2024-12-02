@@ -18,7 +18,7 @@ function AppLoader() {
   }//eslint-disable-next-line 
   useEffect(()=>{wakeUpCall()},[])
   return(loadingState.loading)?(
-    <div className='row app'>
+    <div className="App">
       <div className="col-12 d-flex primary-color bg-gradient" style={{height:'100vh'}}>
         <div className='col-10 col-xxl-6 m-auto'>
           <Card>
