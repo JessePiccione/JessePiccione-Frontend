@@ -8,10 +8,9 @@ const Footer = () =>{
                 </nav>
                 <hr className='text-white'/> 
                 <div className='d-flex justify-content-between py-3 px-0'>
-                    <div className='align-self-start text-start my-0 ps-2' style={{overflow:'none'}}>
+                    <div className='my-0 ps-2' style={{overflow:'none'}}>
                         <p style={{fontSize:'0.90em'}}>Email: jessepiccione@gmail.com
-                        <br />    
-                        Phone: 732-908-0037</p>
+                        <br/>Phone: 732-908-0037</p>
                     </div>
                     <div className='text-end m-0 px-2'>
                         <a href='https://www.linkedin.com/in/jesse-piccione'>

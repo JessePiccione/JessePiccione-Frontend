@@ -1,5 +1,5 @@
 
-import Vanta from 'vanta/dist/vanta.net.min.js'
+import NET from 'vanta/dist/vanta.net.min.js'
 import * as THREE from 'three'
 import React, {useState, useEffect, useRef} from 'react'
 const VantaBackground = props =>{
@@ -7,7 +7,7 @@ const VantaBackground = props =>{
     const vantaRef = useRef(null)
     useEffect(()=>{
         if(!vantaEffect){
-            let vanta = Vanta(
+            let vanta = NET(
                 {   
                     el:vantaRef.current,
                     THREE:THREE,
@@ -16,10 +16,11 @@ const VantaBackground = props =>{
                     gyroControls:false,
                     scale:1.00,
                     scaleMobile:1.00,
-                    color:0x000031,
-                    backgroundColor:0xffffff,
-                    points: (window.innerWidth > 768)? 20:8,
-                    maxDistance:20,
+                    color: 0x000031,
+                    backgroundColor: 0xffffff,
+                    showLines:true,
+                    points: 20,
+                    maxDistance:25,
                     spacing:30
                 }
             )

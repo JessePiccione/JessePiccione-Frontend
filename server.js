@@ -52,4 +52,4 @@ wss.on('connection', (ws)=>{
     })
 })
 fetch(process.env.REACT_APP_BACKEND_API_URL+'api/')
-server.listen(PORT, ()=> console.info(`Launching ${process.env.NODE_ENV} server listening on http://localhost:${PORT} press ctrl-c to stop`))
+server.listen(PORT, ()=> console.info(`Launching ${process.env.NODE_ENV} server listening on http://localhost:${PORT} press ctrl-c to stop...`))
