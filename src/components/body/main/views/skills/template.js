@@ -8,8 +8,8 @@ export const temp  = ({id, category_name, skills}) => (
         <Card>
             <HeaderTwo title={category_name}/>
             <ListGroup>
-                {skills.map(({name})=><ListGroupItem key={`${name}_${id}`} name={name} text={name}/>)} 
-            </ListGroup>   
+                {skills.map(({name})=><ListGroupItem key={`${name}_${id}`} name={name} text={name}/>)}
+            </ListGroup>
         </Card>
     </Col>
 )// eslint-disable-next-line

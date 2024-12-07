@@ -1,6 +1,6 @@
 {
   "name": "jessepiccione-info-frontend",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "private": true,
   "dependencies": {
     "express": "^4.21.1",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=production node dist/server.bundle.js",
-    "build": "npm run build-server && NODE_ENV=production npm install",
+    "build": "NODE_ENV=production npm install",
     "start-dev": "NODE_ENV=development npm run build-server && NODE_ENV=development node dist/server.bundle.js",
     "install-prod": "NODE_ENV=production npm install --loglevel silly",
     "install-dev": "NODE_ENV=development npm install --loglevel silly",

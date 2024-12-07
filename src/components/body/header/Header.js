@@ -6,7 +6,7 @@ import {Url} from '../../../providers/api/APIUrlProvider.js'
 function Header(){
     const {url} = Url()
     return(
-        <header className='container-fluid bg-black bg-gradient m-0 p-0' style={{'--bs-bg-opacity':'0.75'}}>
+        <header className='container-fluid bg-black bg-gradient' style={{'--bs-bg-opacity':'0.75'}}>
             <OffCanvas />
             <div className='container'>
                 <div className='row' >
@@ -26,15 +26,15 @@ function Header(){
                     <div className='col-12 my-2'>
                         <div className='card bg-black text-white rounded border-0 shadow-sm' style={{minHeight:"100%", '--bs-bg-opacity':'0'}}>
                             <div className='card-body d-flex flex-column justify-content-between'>
-                                <HeaderTwo title='JessePiccione.info Version 2.4 Server Side Rendering React App'/>
+                                <HeaderTwo title='JessePiccione.info V2.4.1'/>
                                 <div className='bg-opacity-0 border-0 shadow-sm' style={{minHeight:"100%"}}>
                                     <div className='d-flex flex-column justify-content-between'>
                                         <p>
-                                            JessePiccione.info Version 2.4
+                                            JessePiccione.info Version 2.4.1
                                         <br/>
                                             A 4-Tier Advanced Resume Platform.
                                         <br/>
-                                            Now utilizing WebSocket for apis 
+                                            Now utilizing WebSockets
                                         <br/>                    
                                         <a id='annoucement-link' className='card-text' href={url}>Original Django Application</a>
                                         </p>                     

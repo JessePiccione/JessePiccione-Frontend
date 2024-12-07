@@ -2,8 +2,7 @@ import React from 'react'
 function PlaceHolder(props){
     return (
         <div className={`row justify-content-md-center ${props.className}`}>
-            
-            <div className='col-12 col-xxl-6 pt-3 px-0'>
+            <div className='col-12 col-xxl-6 pt-3'>
                 <div className='card bg-white bg-opacity-75 shadow-sm border-0'>
                     <div className='card-body'>
                         <div className='shadow-sm rounded' >
