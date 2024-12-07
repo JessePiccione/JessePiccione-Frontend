@@ -8,6 +8,7 @@ import Assistant from './body/assistant/Assistant.js'
 import Header from './body/header/Header.js'
 import Main from './body/main/Main.js'
 import Footer from './body/footer/Footer.js'
+import Nav from './body/nav/Nav.js'
 import Card from './body/partials/Card.js'
 import HeaderTwo from './body/partials/headerTwo.js'
 function AppLoader() {
@@ -36,6 +37,7 @@ function AppLoader() {
       <VantaBackground/>
       <APIUrlProvider>
         <Header/>
+        <Nav/>
         <Main/>
         <Assistant/>
         <Footer/>

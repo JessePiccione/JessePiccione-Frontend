@@ -1,4 +1,4 @@
-import NavList from '../main/nav/NavList'
+import NavList from '../nav/NavList'
 const Footer = () =>{
     return (
         <footer className='container-fluid text-light primary-color bg-gradient d-flex justify-content-center'>

@@ -1,19 +1,19 @@
+import Col from '../../../partials/Col'
 import Card from '../../../partials/Card'
 import HeaderTwo from '../../../partials/headerTwo'
+import ListGroup from '../../../partials/ListGroup'
 import ListGroupItem from '../../../partials/listGroupItem'
-const temp = item =>{ return (
-        <div key={item.name} className='col-12 col-xxl-6 pt-3 d-flex flex-column justify-content-start'>
-            <Card>
-                <HeaderTwo title={item.name}/>
-                <div className='col-12 bg-white shadow-sm rounded p-2'>
-                    <ul className='list-group'>
-                        <ListGroupItem text={item.sponser}/>
-                        <ListGroupItem text={`${item.start_date} - ${item.end_date}`}/>
-                        <ListGroupItem text={item.contribution}/>
-                    </ul>
-                </div>
-            </Card>
-        </div>
-    )
-} // eslint-disable-next-line
+const temp = item => (
+    <Col key={item.name}>
+        <Card>
+            <HeaderTwo title={item.name}/>
+            <ListGroup>
+                <ListGroupItem text={item.sponser}/>
+                <ListGroupItem text={`${item.start_date} - ${item.end_date}`}/>
+                <ListGroupItem text={item.contribution}/>
+            </ListGroup>
+        </Card>
+    </Col>
+)
+ // eslint-disable-next-line
 export default ({data})=>data.map(temp)

@@ -1,15 +1,16 @@
+import Col from '../../../partials/Col'
+import Card from '../../../partials/Card'
 import HeaderTwo from '../../../partials/headerTwo'
+import ListGroup from '../../../partials/ListGroup'
 import ListGroupItem from '../../../partials/listGroupItem'
-export const temp  = ({id, category_name, skills}) => { return (
-    <div key={category_name} className='col-12 col-xxl-6 pt-3'>
-        <div className='p-3 shadow-sm rounded d-flex flex-column justify-content-start' style={{'minHeight':'100%'}}>
+export const temp  = ({id, category_name, skills}) => (
+    <Col key={category_name} >
+        <Card>
             <HeaderTwo title={category_name}/>
-            <div className='p-2 rounded shadow-sm'>
-                <ul className='list-group'>
-                    {skills.map(({name})=><ListGroupItem key={`${name}_${id}`} name={name} text={name}/>)}
-                </ul>    
-            </div>    
-        </div>
-    </div>
-)}// eslint-disable-next-line
+            <ListGroup>
+                {skills.map(({name})=><ListGroupItem key={`${name}_${id}`} name={name} text={name}/>)} 
+            </ListGroup>   
+        </Card>
+    </Col>
+)// eslint-disable-next-line
 export default ({data})=>data.map(temp)

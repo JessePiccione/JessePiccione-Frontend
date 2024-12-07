@@ -15,13 +15,13 @@
   },
   "scripts": {
     "start": "NODE_ENV=production node dist/server.bundle.js",
-    "build": "NODE_ENV=production npm install",
+    "build": "npm run build-server && NODE_ENV=production npm install",
     "start-dev": "NODE_ENV=development npm run build-server && NODE_ENV=development node dist/server.bundle.js",
     "install-prod": "NODE_ENV=production npm install --loglevel silly",
     "install-dev": "NODE_ENV=development npm install --loglevel silly",
     "build-server": "react-scripts build && webpack --config webpack.server.config.js",
     "clear": "rm -rf node_modules | rm package-lock.json",
-    "deploy": "npm run install-dev && npm run build-server && npm run install-prod && gcloud init --verbosity=debug && gcloud app deploy --verbosity=debug"
+    "deploy": "npm run install-dev && npm run build-server && npm run install-prod && gcloud init --skip-diagnostics && gcloud app deploy"
   },
   "eslintConfig": {
     "extends": [

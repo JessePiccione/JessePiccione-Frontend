@@ -5,7 +5,7 @@ entrypoint: npm start
 env_variables:
   NODE_ENV: production
 automatic_scaling:
-  min_num_instances: 1
+  min_num_instances: 0
   max_num_instances: 5
 runtime_config:
   operating_system: "ubuntu22"
