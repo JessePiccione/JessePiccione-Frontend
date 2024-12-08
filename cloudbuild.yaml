@@ -23,6 +23,5 @@ availableSecrets:
 # Push the built image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/399110791427/jessepiccione-frontend:$COMMIT_SHA']
-
 images:
   - 'gcr.io/399110791427/jessepiccione-frontend:$COMMIT_SHA'
