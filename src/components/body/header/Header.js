@@ -26,11 +26,11 @@ function Header(){
                     <div className='col-12 my-2'>
                         <div className='card bg-black text-white rounded border-0 shadow-sm' style={{minHeight:"100%", '--bs-bg-opacity':'0'}}>
                             <div className='card-body d-flex flex-column justify-content-between'>
-                                <HeaderTwo title='JessePiccione.info V2.4.1'/>
+                                <HeaderTwo title='JessePiccione.info V2.5.0'/>
                                 <div className='bg-opacity-0 border-0 shadow-sm' style={{minHeight:"100%"}}>
                                     <div className='d-flex flex-column justify-content-between'>
                                         <p>
-                                            JessePiccione.info Version 2.4.1
+                                            JessePiccione.info Version 2.5.0
                                         <br/>
                                             A 4-Tier Advanced Resume Platform.
                                         <br/>
