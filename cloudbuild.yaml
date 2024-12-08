@@ -6,9 +6,9 @@ steps:
     secretEnv: ['REACT_APP_BACKEND_API_TOKEN', 'REACT_APP_BACKEND_API_URL']
 availableSecrets:
   secretManager:
-    - versionName: projects/jessepiccione-info-frontend/secrets/REACT_APP_BACKEND_API_URL/versions/latest
+    - versionName: projects/399110791427/secrets/REACT_APP_BACKEND_API_URL
       env: REACT_APP_BACKEND_API_URL
-    - versionName: projects/jessepiccione-info-frontend/secrets/REACT_APP_BACKEND_API_TOKEN/versions/latest 
+    - versionName: projects/399110791427/secrets/REACT_APP_BACKEND_API_TOKEN
       env: REACT_APP_BACKEND_API_TOKEN
 images: 
   - 'gcr.io/$PROJECT_ID/production:$COMMIT_SHA' 
