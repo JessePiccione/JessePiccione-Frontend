@@ -1,0 +1,10 @@
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build']
+    secretEnv: ['REACT_APP_BACKEND_API_TOKEN', 'REACT_APP_BACKEND_API_URL']
+availableSecrets:
+  secretManager:
+    - versionName: projects/${PROJECT_ID}/secrets/REACT_APP_BACKEND_API_URL/versions/latest
+      env: REACT_APP_BACKEND_API_URL
+    - versionName: projects/${PROJECT_ID}/secrets/REACT_APP_BACKEND_API_TOKEN/versions/latest 
+      env: REACT_APP_BACKEND_API_TOKEN

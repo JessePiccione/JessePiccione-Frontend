@@ -4,7 +4,6 @@ instance_class: F1
 entrypoint: npm start
 env_variables:
   NODE_ENV: production
-automatic_scaling:
   min_num_instances: 1
   max_num_instances: 5
 runtime_config:
