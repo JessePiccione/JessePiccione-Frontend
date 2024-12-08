@@ -1,7 +1,7 @@
 options:
   logging: CLOUD_LOGGING_ONLY
 steps:
-  - name: 'gcr.io/buildpacks/builder'
+  - name: 'gcr.io/buildpacks/builder:latest'
     args: ['build', '-t', 'gcr.io/jessepiccione-info-frontend/production:$COMMIT_SHA', '.']
     secretEnv: ['REACT_APP_BACKEND_API_TOKEN', 'REACT_APP_BACKEND_API_URL']
 availableSecrets:
@@ -11,4 +11,4 @@ availableSecrets:
     - versionName: projects/399110791427/secrets/REACT_APP_BACKEND_API_TOKEN/versions/1
       env: REACT_APP_BACKEND_API_TOKEN
 images: 
-  - 'gcr.io/$PROJECT_ID/production:$COMMIT_SHA' 
+  - 'gcr.io/39911791427/jessepiccione-frontend:$COMMIT_SHA' 
