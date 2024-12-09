@@ -5,4 +5,6 @@ COPY package-lock.json package-lock.json
 COPY dist/ dist/
 COPY build/ build/
 RUN npm run install-prod
+ENV PORT=8000
+EXPOSE 8080
 ENTRYPOINT ["npm","start"]
