@@ -7,7 +7,7 @@ const fs = require('fs')
 const {renderToString} = require('react-dom/server')
 const {StaticRouter} = require('react-router-dom/server')
 const App = require('./src/App').default
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 8080
 const app = express()
 app.use(express.static(path.join(__dirname,'../build/'), {index:false}));
 /*///
