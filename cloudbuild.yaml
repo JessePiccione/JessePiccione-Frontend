@@ -6,9 +6,9 @@ steps:
     args: ['run','build']
     secretEnv: ['REACT_APP_BACKEND_API_TOKEN', 'REACT_APP_BACKEND_API_URL']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build','.','-t','jessepiccione-frontend']
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['builds','submit', .,'--tag', 'gcr.io/jessepiccione-info-frontend/jessepiccione-frontend']
+    args: ['build','.','-t','jessepiccione-frontend:$BUILD_ID']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/jessepiccione-info-frontend/jessepiccione-frontend:$BUILD_ID']
 availableSecrets:
   secretManager:
     - versionName: 'projects/$PROJECT_ID/secrets/REACT_APP_BACKEND_API_URL/versions/1'
