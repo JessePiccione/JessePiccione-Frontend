@@ -1,0 +1,8 @@
+.gcloudignore
+.gitignore
+app.yaml
+cloudbuild.yaml
+node_modules/
+package-lock.json
+dist/ 
+build/
