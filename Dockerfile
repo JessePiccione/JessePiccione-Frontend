@@ -6,4 +6,4 @@ COPY dist/ dist/
 COPY build/ build/
 COPY node_modules/ node_modules/
 ENTRYPOINT ["npm","start"]
-EXPOSE 8080
+EXPOSE 8000

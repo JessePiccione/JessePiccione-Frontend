@@ -7,7 +7,7 @@ const fs = require('fs')
 const {renderToString} = require('react-dom/server')
 const {StaticRouter} = require('react-router-dom/server')
 const App = require('./src/App').default
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8000
 const app = express()
 app.use(express.static(path.join(__dirname,'../build/'), {index:false}));
 /*///
@@ -52,4 +52,4 @@ wss.on('connection', (ws)=>{
     })
 })
 fetch(process.env.REACT_APP_BACKEND_API_URL+'api/')
-server.listen(PORT, ()=> console.info(`Launching ${process.env.NODE_ENV} server listening on http://localhost:${PORT} press ctrl-c to stop...`))
+server.listen(PORT, '0.0.0.0',()=> console.info(`Launching ${process.env.NODE_ENV} server listening on http://localhost:${PORT} press ctrl-c to stop...`))
