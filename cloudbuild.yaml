@@ -8,7 +8,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build','.','-t','jessepiccione-frontend:$BUILD_ID']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/jessepiccione-info-frontend/jessepiccione-frontend:$BUILD_ID']
+    args: ['push', 'gcr.io/$PROJECT_ID/jessepiccione-frontend:$BUILD_ID']
 availableSecrets:
   secretManager:
     - versionName: 'projects/$PROJECT_ID/secrets/REACT_APP_BACKEND_API_URL/versions/1'
