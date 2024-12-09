@@ -30,7 +30,7 @@ function Header(){
                                 <div className='bg-opacity-0 border-0 shadow-sm' style={{minHeight:"100%"}}>
                                     <div className='d-flex flex-column justify-content-between'>
                                         <p>
-                                            JessePiccione.info Version 2.5.0
+                                            JessePiccione.info V2.5.0
                                         <br/>
                                             A 4-Tier Advanced Resume Platform.
                                         <br/>
