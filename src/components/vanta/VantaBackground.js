@@ -21,7 +21,7 @@ const VantaBackground = props =>{
                     showLines:true,
                     points: 10,
                     maxDistance:20,
-                    spacing:15
+                    spacing:20
                 }
             )
             setVantaEffect(vanta)
