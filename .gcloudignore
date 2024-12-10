@@ -15,9 +15,9 @@
 # Node.js dependencies:
 node_modules/
 #packed website statics 
-build/
+
 #transpiled source code 
-dist/
+
 # useless README file that is from create reate application 
 README.md 
 # babel configuration used in conjunction with web pack to transpile server 
