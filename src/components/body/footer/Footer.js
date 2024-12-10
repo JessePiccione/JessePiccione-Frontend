@@ -8,7 +8,7 @@ const Footer = () =>(
             <hr className='text-white'/> 
             <div className='d-flex justify-content-between py-3 px-0'>
                 <div className='my-0 ps-2' style={{overflow:'none'}}>
-                    <p style={{fontSize:'0.90em'}}>Email: jessepiccione@gmail.com
+                    <p style={{fontSize:'0.90em'}} className='text-start'>Email: jessepiccione@gmail.com
                     <br/>Phone: 732-908-0037</p>
                 </div>
                 <div className='text-end m-0 px-2'>
