@@ -10,7 +10,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/jessepiccione-frontend:$BUILD_ID']
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['run', 'deploy', 'jessepiccione', '--image', 'gcr.io/$PROJECT_ID/jessepiccione-frontend:$BUILD_ID']
+    args: ['run', 'deploy', 'jessepiccione','--region', 'us-east4', '--image', 'gcr.io/$PROJECT_ID/jessepiccione-frontend:$BUILD_ID']
 availableSecrets:
   secretManager:
     - versionName: 'projects/$PROJECT_ID/secrets/REACT_APP_BACKEND_API_URL/versions/1'
