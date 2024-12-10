@@ -19,9 +19,9 @@ const VantaBackground = props =>{
                     color: 0x000031,
                     backgroundColor: 0xffffff,
                     showLines:true,
-                    points: 20,
+                    points: 10,
                     maxDistance:20,
-                    spacing:30
+                    spacing:15
                 }
             )
             setVantaEffect(vanta)
