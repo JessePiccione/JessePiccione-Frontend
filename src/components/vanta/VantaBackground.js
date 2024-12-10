@@ -20,7 +20,7 @@ const VantaBackground = props =>{
                     backgroundColor: 0xffffff,
                     showLines:true,
                     points: 20,
-                    maxDistance:25,
+                    maxDistance:20,
                     spacing:30
                 }
             )
