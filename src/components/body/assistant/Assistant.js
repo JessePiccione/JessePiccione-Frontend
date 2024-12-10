@@ -72,7 +72,7 @@ const Assistant = () =>{
                                         }
                                         m.value = ''
                                     }}>
-                                        <div className='d-flex col-10 mb-3'>
+                                        <div className='d-flex text-start col-10 mb-3'>
                                             <input id='assistantMessage' type='text' className='form-control mx-2' placeholder='Ask a Question...'/>
                                             <button className='btn btn-dark primary-color btn-gradient' type='submit' data-bs-theme='dark'>Send</button>
                                         </div>
@@ -83,7 +83,6 @@ const Assistant = () =>{
                     </div>
                 </div>
             </div>
-            
         </div>
     )
 }
