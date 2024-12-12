@@ -11,6 +11,9 @@ function Header(){
             <div className='container'>
                 <div className='row' >
                     <div className='col-12'>
+                         <img src='static/src/banner-logo-light' class='img img-fluid'/>
+                     </div>
+                    <div className='col-12'>
                         <div className='card bg-black text-white text-center rounded border-0 shadow-sm'  style={{'--bs-bg-opacity':'0'}}>
                             <div className='card-body rounded border-0 m-3 shadow-sm'>
                                 <img className='rounded-profile my-3' style={{minHeight:'250px', minWidth:'250px'}} src="static/img/resume_site_profile.jpg" alt='round center profile'></img>
