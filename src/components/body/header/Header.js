@@ -9,8 +9,8 @@ function Header(){
         <header className='container-fluid bg-black bg-gradient' style={{'--bs-bg-opacity':'0.75'}}>
             <OffCanvas />
             <div className='container'>
-                <div className='row' >
-                    <div className='col-12'>
+                <div className='row justify-content-center' >
+                    <div className='col-10 my-3'>
                          <img src='static/img/banner-logo-white.png' class='img img-fluid'/>
                      </div>
                     <div className='col-12'>
