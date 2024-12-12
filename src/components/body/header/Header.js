@@ -11,7 +11,7 @@ function Header(){
             <div className='container'>
                 <div className='row' >
                     <div className='col-12'>
-                         <img src='static/img/banner-logo-light.png' class='img img-fluid'/>
+                         <img src='static/img/banner-logo-white.png' class='img img-fluid'/>
                      </div>
                     <div className='col-12'>
                         <div className='card bg-black text-white text-center rounded border-0 shadow-sm'  style={{'--bs-bg-opacity':'0'}}>
