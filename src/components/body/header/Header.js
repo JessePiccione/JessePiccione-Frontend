@@ -9,13 +9,11 @@ function Header(){
         <header className='container-fluid bg-black bg-gradient' style={{'--bs-bg-opacity':'0.75'}}>
             <OffCanvas />
             <div className='container'>
-                <div className='row justify-content-center' >
-                    <div className='col-10 my-3'>
-                         <img src='static/img/banner-logo-white.png' class='img img-fluid'/>
-                     </div>
+                <div className='row' >
                     <div className='col-12'>
                         <div className='card bg-black text-white text-center rounded border-0 shadow-sm'  style={{'--bs-bg-opacity':'0'}}>
                             <div className='card-body rounded border-0 m-3 shadow-sm'>
+                                 <img src='static/img/banner-logo-white.png' class='img img-fluid'/>
                                 <img className='rounded-profile my-3' style={{minHeight:'250px', minWidth:'250px'}} src="static/img/resume_site_profile.jpg" alt='round center profile'></img>
                                 <h1 className='card-text' style={{'margin':'0'}}>
                                     <DelayedCharacters className='flip' word='Jesse Piccione'/>
