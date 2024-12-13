@@ -1,7 +1,9 @@
 import NavList from '../nav/NavList'
+import LogoBanner from '../partials/LogoBanner'
 const Footer = () =>(
     <footer className='container-fluid text-light primary-color bg-gradient'>
         <div className='container'>
+            <LogoBanner/>
             <nav className="navbar col-12 navbar-expand-md justify-content-center" data-bs-theme='dark'>
                 <NavList/>
             </nav>
