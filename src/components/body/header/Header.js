@@ -1,6 +1,7 @@
 import React from 'react'
 import OffCanvas from './OffCanvas.js'
 import DelayedCharacters from './DelayedCharacters.js'
+import LogoBanner from '../partials/LogoBanner.js'
 import HeaderTwo from '../partials/headerTwo.js'
 import {Url} from '../../../providers/api/APIUrlProvider.js'
 function Header(){
@@ -13,7 +14,7 @@ function Header(){
                     <div className='col-12'>
                         <div className='card bg-black text-white text-center rounded border-0 shadow-sm'  style={{'--bs-bg-opacity':'0'}}>
                             <div className='card-body rounded border-0 m-3 shadow-sm'>
-                                 <img src='static/img/banner-logo-white.png' class='img img-fluid'/>
+                                <LogoBanner/>
                                 <img className='rounded-profile my-3' style={{minHeight:'250px', minWidth:'250px'}} src="static/img/resume_site_profile.jpg" alt='round center profile'></img>
                                 <h1 className='card-text' style={{'margin':'0'}}>
                                     <DelayedCharacters className='flip' word='Jesse Piccione'/>
