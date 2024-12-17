@@ -20,7 +20,7 @@ function AppLoader() {
   useEffect(()=>{wakeUpCall()},[])
   return(loadingState.loading)?(
     <div className="App">
-      <div className="col-12 d-flex primary-color bg-gradient" style={{height:'100vh'}}>
+      <div className="col-12 d-flex justify-content-center primary-color bg-gradient" style={{height:'100vh'}}>
           <Card>
             <HeaderTwo title='Initiating Backend Services...'/>
             <img className='m-auto rounded-circle rotate' style={{
