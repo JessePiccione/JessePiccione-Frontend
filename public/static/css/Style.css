@@ -64,16 +64,12 @@ li.list-group-item-action:hover{
     transform:scale3D(1.003125,1.025,1.025);
     transition:0.5s linear;
 }
-img.rounded-profile {
-    border-radius:100%;
-}
 .primary-color{
     background-color: #000080;
 }
 .secondary-color{
     background-color:rgb(44, 44, 44)
 }
-
 .flippy-letters  p {
     display:inline-flex;
     flex-direction:row;

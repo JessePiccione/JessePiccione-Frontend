@@ -3,7 +3,7 @@ import LogoBanner from '../partials/LogoBanner'
 const Footer = () =>(
     <footer className='container-fluid text-light primary-color bg-gradient'>
         <div className='container pt-4'>
-            <LogoBanner/>
+            <LogoBanner className='col-10 col-md-9 col-lg-8'/>
             <nav className="navbar col-12 navbar-expand-md justify-content-center" data-bs-theme='dark'>
                 <NavList/>
             </nav>

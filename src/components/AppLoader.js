@@ -21,15 +21,13 @@ function AppLoader() {
   return(loadingState.loading)?(
     <div className="App">
       <div className="col-12 d-flex primary-color bg-gradient" style={{height:'100vh'}}>
-        <div className='col-10 col-xxl-6 m-auto'>
           <Card>
             <HeaderTwo title='Initiating Backend Services...'/>
-            <img className='img-fluid m-auto rounded-profile rotate' style={{
-              minHeight:'250px',
-              minWidth:'250px'
+            <img className='m-auto rounded-circle rotate' style={{
+              maxHeight:'250px',
+              maxWidth:'250px'
             }} alt='' src = 'static/img/resume_site_profile.jpg'/>
           </Card>
-        </div>
       </div>
     </div>
   ):(
