@@ -6,7 +6,7 @@ function Nav(){
         <div className='container'>
             <nav className='navbar col-12 navbar-expand-md shadow-sm' data-bs-theme='dark'>
                 <Link className='navbar-brand' to='/'>
-                    <img src='static/img/banner-logo-white.png' style={{
+                    <img src='static/img/banner-logo-light.png' style={{
                             maxHeight:'32px'
                         }}
                     />

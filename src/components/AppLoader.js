@@ -26,7 +26,7 @@ function AppLoader() {
             <img className='m-auto rounded-circle rotate' style={{
               maxHeight:'250px',
               maxWidth:'250px'
-            }} alt='' src = 'static/img/resume_site_profile.jpg'/>
+            }} alt='' src ='static/img/resume_site_profile.jpg'/>
           </Card>
       </div>
     </div>

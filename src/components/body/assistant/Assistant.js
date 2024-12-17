@@ -49,7 +49,9 @@ const Assistant = () =>{
                         <div className="accordion-item">
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed primary-color bg-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
-                                    <strong>AI Assistant</strong>
+                                    <img src='static/img/banner-logo-light.png' alt='JessePiccione.info' style={{
+                                        maxHeight:'24px'
+                                    }}/>
                                 </button>
                             </h2>
                             <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionExample" >

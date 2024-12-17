@@ -5,10 +5,9 @@ const Footer = () =>(
         <div className='container pt-3'>
             <nav className="navbar col-12 navbar-expand-md justify-content-start" data-bs-theme='dark'>
                 <Link className='navbar-brand' to='/'>
-                    <img src='static/img/banner-logo-white.png' style={{
-                            maxHeight:'32px'
-                        }}
-                    />
+                    <img src='static/img/banner-logo-light.png' style={{
+                        maxHeight:'32px'
+                    }}/>
                 </Link>
                 <NavList/>
             </nav>

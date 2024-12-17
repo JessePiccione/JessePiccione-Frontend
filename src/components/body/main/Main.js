@@ -11,7 +11,7 @@ import OffCanvasButton from './OffCanvasButton.js'
 import Card from '../partials/Card.js'
 const Main = () => {
     return (
-            <main className='container-fluid z-3                                                                                                                                                                          ' style={{minHeight:'70vh'}}>
+            <main className='container-fluid z-3' style={{minHeight:'70vh'}}>
                 <div className='container'>
                     <Routes>
                         <Route path='/' element={<Home/>}></Route>
