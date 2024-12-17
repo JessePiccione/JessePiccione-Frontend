@@ -9,7 +9,10 @@ const Footer = () =>(
                         maxHeight:'32px'
                     }}/>
                 </Link>
-                <NavList/>
+                <div className='collapse navbar-collapse show'> 
+                    <NavList/>
+                </div>
+                
             </nav>
             <hr className='text-white'/> 
             <div className='d-flex justify-content-between py-3 px-0'>
