@@ -5,8 +5,8 @@ function navItem(props){
         className='nav-item'>
         <Link
         to={`/${(props.name==='Home')?"":props.name.toLowerCase()}`}
-        className='nav-link'>
-            <span className='text-center'>
+        className='nav-link text-start'>
+            <span>
                 {props.name}
             </span>
         </Link>
