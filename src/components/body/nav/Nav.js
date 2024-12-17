@@ -1,5 +1,4 @@
-import NavList from './NavList.js'
-import LogoBanner from '../partials/LogoBanner'
+import NavList from './NavList'
 import {Link} from 'react-router-dom'
 function Nav(){
     return (
@@ -8,8 +7,9 @@ function Nav(){
             <nav className='navbar col-12 navbar-expand-md shadow-sm' data-bs-theme='dark'>
                 <Link className='navbar-brand' to='/'>
                     <img src='static/img/banner-logo-white.png' style={{
-                        'maxHeight':'32px'
-                        }}/>
+                            maxHeight:'32px'
+                        }}
+                    />
                 </Link>
                 <button 
                 className="navbar-toggler"
@@ -21,7 +21,7 @@ function Nav(){
                 aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className='collapse navbar-collapse' id ='navbarSupportedContent'>
+                <div className='collapse navbar-collapse' id='navbarSupportedContent'>
                     <NavList/>
                 </div>
             </nav>

@@ -1,10 +1,15 @@
 import NavList from '../nav/NavList'
-import LogoBanner from '../partials/LogoBanner'
+import {Link} from 'react-router-dom'
 const Footer = () =>(
     <footer className='container-fluid text-light primary-color bg-gradient'>
-        <div className='container pt-4'>
-            <LogoBanner className='col-10 col-md-9 col-lg-8'/>
-            <nav className="navbar col-12 navbar-expand-md justify-content-center" data-bs-theme='dark'>
+        <div className='container pt-3'>
+            <nav className="navbar col-12 navbar-expand-md justify-content-start" data-bs-theme='dark'>
+                <Link className='navbar-brand' to='/'>
+                    <img src='static/img/banner-logo-white.png' style={{
+                            maxHeight:'32px'
+                        }}
+                    />
+                </Link>
                 <NavList/>
             </nav>
             <hr className='text-white'/> 
@@ -30,4 +35,4 @@ const Footer = () =>(
         </div>
     </footer>
 )
-export default Footer;
+export default Footer

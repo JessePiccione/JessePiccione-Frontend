@@ -1,4 +1,4 @@
-import NavItem from './navItem.js'
+import NavItem from './NavItem.js'
 const viewNames = ['Home','Experience', 'Education', 'Projects', 'Skills', 'Awards']
 function NavList(){
     return (
