@@ -6,7 +6,7 @@ function navItem(props){
         <Link
         to={`/${(props.name==='Home')?"":props.name.toLowerCase()}`}
         className='nav-link'>
-            <span>
+            <span className='text-center'>
                 {props.name}
             </span>
         </Link>
