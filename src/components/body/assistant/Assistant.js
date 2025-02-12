@@ -17,7 +17,7 @@ const Assistant = () =>{
                     const temp = data
                     const m = message
                     setMessage(message=>null)
-                    const request = await fetch(url+'assistant/message',{
+                    const request = await fetch(url+'/assistant/message',{
                         method:'POST',
                         headers:{
                             'Authorization':`Token ${token}`

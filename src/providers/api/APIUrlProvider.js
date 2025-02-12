@@ -6,6 +6,7 @@ const APIUrlProvider = ({children}) =>{
         url:process.env.REACT_APP_BACKEND_API_URL,
         token:process.env.REACT_APP_BACKEND_API_TOKEN
     })
+    console.log(context.url)
     return (   
         <APIUrlContext.Provider value={context}>
             {children}
